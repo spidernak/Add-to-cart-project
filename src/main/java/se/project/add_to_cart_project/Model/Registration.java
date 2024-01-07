@@ -17,4 +17,10 @@ public class Registration {
         return "Homepagelist";
     }
     
+     @GetMapping("/viewdetail")
+    public String viewdetail(){
+        return "viewproduct";
+    }
+    
+    
 }

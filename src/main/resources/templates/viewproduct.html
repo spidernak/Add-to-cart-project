@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/viewstyle.css}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About US</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="detail">
+            <div class="productdetail">
+                <a th:href="@{/homepagelist}">back</a>
+                <div class="proimg">
+                    <img src="" alt="">sff
+                    <span>Price:</span><br>
+                    <span>Size:</span><br>
+                    <span>Color</span><br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore accusantium eaque, eveniet nemo sed dolores laudantium repudiandae suscipit quo et. Repudiandae impedit incidunt odio dolore tempora voluptatem at quae sed.</p>
+                </div>
+                <div class="select">
+                    <label>color:</label>
+                    <input type="radio">
+                    <input type="radio">
+                    <input type="radio">
+                    <input type="radio">
+                    <input type="radio">
+                </div>
+                <div class="quantity">
+                    <label>Quantity</label>
+                    <div class="qtselect">
+                        <button>-</button>
+                        <select name="" id="">1</select>
+                        <button>+</button>
+                    </div>
+                    <label>Total:</label>
+
+
+                    <input type="submit" value="Add to Cart">
+                    
+                </div>
+            </div>
+            <div class="recommended">
+                <label for="">recommended</label><br>
+                <div class="recpro">  
+                    <div class="recimg"><img src="" alt=""></div>
+                    <span>Price:</span><br>
+                    <span>Size:</span><br>
+                    <span>Color</span><br>
+                </div>
+                <div class="recpro">  
+                    <div class="recimg"><img src="" alt=""></div>
+                    <span>Price:</span><br>
+                    <span>Size:</span><br>
+                    <span>Color</span><br>
+                </div>
+                <div class="recpro">  
+                    <div class="recimg"><img src="" alt=""></div>
+                    <span>Price:</span><br>
+                    <span>Size:</span><br>
+                    <span>Color</span><br>
+                </div>
+                <div class="recpro">  
+                    <div class="recimg"><img src="" alt=""></div>
+                    <span>Price:</span><br>
+                    <span>Size:</span><br>
+                    <span>Color</span><br>
+                    
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+</html>
