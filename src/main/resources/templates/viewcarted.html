@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/viewcarted.css}">
+</head>
+<body>
+    <nav>
+        <label>logo</label>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+            <div class="searchandpro">
+                <div class="search">
+                    <input type="search" value="Search">
+                    <i class="fa-solid fa-search"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-bell"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <img src="./asset/image1.jpg" alt="profile">
+                </div>
+            </div>
+        </ul>
+    </nav>
+    <main>
+        <div class="cartpage">
+            <h1>Carted</h1>
+            <div class="cartlist">
+                <h3>Price</h3>
+                <div class="cartedpro">
+                    <div class="cartedimg">
+                        <img src="" alt="">
+                    </div>
+                    <div class="text">
+                        <label>Price:xxx</label>
+                        <label>size:xxx</label>
+                        <label>color:xxx</label>
+                        <div class="quantity">
+                            <label for="quantity1">Quantity</label>
+                            <div class="qtselect">
+                                <button type="button" onclick="decreaseQuantity('quantity1')">-</button>
+                                <input type="number" id="quantity1" name="quantity" value="1" readonly th:field="*{quantity}" />
+                                <button type="button" onclick="increaseQuantity('quantity1')">+</button>
+                            </div>
+                            <label>Total:</label><br>
+
+                            <button class="addtocart">
+                                Add to cart
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat similar block for other carted products -->
+            </div>
+            <h3>Total:</h3>
+            <div class="btn">
+                <a th:href="@{/homepagelist}">
+                    <button>Back</button>
+                </a>
+                <a th:href="@{/payment}">
+                    <button>BUY NOW</button>
+                </a>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

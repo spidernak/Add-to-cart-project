@@ -9,75 +9,131 @@
 </head>
 <body>
     <nav>
+        <label>logo</label>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About US</a></li>
-            <li><a href="#">Contact</a></li>
+            <li> <a href="#">Home</a></li>
+            <li> <a href="#">About us</a></li>
+            <li> <a href="#">Contact</a></li>
+            <div class="searchandpro">
+                <div class="search">
+                    <input type="search" value="Search">
+                    <i class="fa-solid fa-search"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-bell"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <img src="./asset/image1.jpg" alt="profile">
+                </div>
+            </div>
         </ul>
     </nav>
     <main>
         <div class="detail">
             <div class="productdetail">
-                <a th:href="@{/homepagelist}">back</a>
+                <a th:href="@{/homepagelist}">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
                 <div class="proimg">
-                    <img src="" alt="">sff
-                    <span>Price:</span><br>
-                    <span>Size:</span><br>
-                    <span>Color</span><br>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpvn9KKRQ0Fxt0pTCeXieDHFcrc6QDERpyGg&usqp=CAU" alt="">
+                    <div class="imagetext">
+                        <h1>Air Jordan 4 Frozen</h1>
+                        <label>Price:</label>
+                        <label>size:</label>
+                        <label>Descriiption:</label>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore accusantium eaque, eveniet nemo sed dolores laudantium repudiandae suscipit quo et. Repudiandae impedit incidunt odio dolore tempora voluptatem at quae sed.</p>
+                    </div>
                 </div>
                 <div class="select">
                     <label>color:</label>
-                    <input type="radio">
-                    <input type="radio">
-                    <input type="radio">
-                    <input type="radio">
-                    <input type="radio">
+                    <div class="color">
+                        <div class="red"></div>
+                        <div class="blck"></div>
+                        <div class="cyan"></div>
+                        <div class="brown"></div>
+                        <div class="white"></div>
+                    </div>
                 </div>
                 <div class="quantity">
                     <label>Quantity</label>
                     <div class="qtselect">
-                        <button>-</button>
-                        <select name="" id="">1</select>
-                        <button>+</button>
+                        <button onclick="decreaseQuantity()">-</button>
+                        <span id="quantityValue">1</span>
+                        <button onclick="increaseQuantity()">+</button>
                     </div>
-                    <label>Total:</label>
-
-
-                    <input type="submit" value="Add to Cart">
-                    
+                    <label>Total:</label><br>
+            
+                    <button class="addtocart">
+                        Add to cart
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
                 </div>
             </div>
             <div class="recommended">
-                <label for="">recommended</label><br>
+                <label class="rec">Recommended</label><br>
                 <div class="recpro">  
-                    <div class="recimg"><img src="" alt=""></div>
-                    <span>Price:</span><br>
-                    <span>Size:</span><br>
-                    <span>Color</span><br>
+                    <div class="recimg">
+                        <img src="" alt="">
+                    </div>
+                    <div class="text">
+                        <label>Price:xxx</label>
+                        <label>size:xxx</label>
+                        <label>color:xxx</label>
+                    </div>
                 </div>
                 <div class="recpro">  
-                    <div class="recimg"><img src="" alt=""></div>
-                    <span>Price:</span><br>
-                    <span>Size:</span><br>
-                    <span>Color</span><br>
+                    <div class="recimg">
+                        <img src="" alt="">
+                    </div>
+                    <div class="text">
+                        <label>Price:xxx</label>
+                        <label>size:xxx</label>
+                        <label>color:xxx</label>
+                    </div>
                 </div>
                 <div class="recpro">  
-                    <div class="recimg"><img src="" alt=""></div>
-                    <span>Price:</span><br>
-                    <span>Size:</span><br>
-                    <span>Color</span><br>
+                    <div class="recimg">
+                        <img src="" alt="">
+                    </div>
+                    <div class="text">
+                        <label>Price:xxx</label>
+                        <label>size:xxx</label>
+                        <label>color:xxx</label>
+                    </div>
                 </div>
                 <div class="recpro">  
-                    <div class="recimg"><img src="" alt=""></div>
-                    <span>Price:</span><br>
-                    <span>Size:</span><br>
-                    <span>Color</span><br>
-                    
+                    <div class="recimg">
+                        <img src="" alt="">
+                    </div>
+                    <div class="text">
+                        <label>Price:xxx</label>
+                        <label>size:xxx</label>
+                        <label>color:xxx</label>
+                    </div>
                 </div>
-
             </div>
         </div>
     </main>
+    <script>
+        // increaseDecrease.js
+
+let quantity = 1;
+
+function increaseQuantity() {
+    quantity++;
+    updateQuantityDisplay();
+}
+
+function decreaseQuantity() {
+    if (quantity > 1) {
+        quantity--;
+        updateQuantityDisplay();
+    }
+}
+
+function updateQuantityDisplay() {
+    document.getElementById('quantityValue').innerText = quantity;
+}
+
+    </script>
 </body>
 </html>

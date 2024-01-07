@@ -21,6 +21,11 @@ public class Registration {
     public String viewdetail(){
         return "viewproduct";
     }
+
+     @GetMapping("/viewcarted")
+    public String viewcarted(){
+        return "viewcarted";
+    }
     
     
 }
