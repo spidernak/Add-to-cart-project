@@ -10,5 +10,21 @@ public class Registration {
     public String registrationpage(){
         return "Registration";
     }
-    
+
+    @GetMapping("/signInUser")
+    public String SignUser(){
+        return "SignInUser";
+    }
+    @GetMapping("/SignUp")
+    public String SignUp(){
+        return "SignUp";
+    }
+    @GetMapping("/signinadmin")
+    public String SignAdmin(){
+        return "SignInAdmin";
+    }
+    @GetMapping("/register")
+    public String Sign(){
+        return "Register";
+    }
 }

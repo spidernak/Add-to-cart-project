@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url("https://e0.pxfuel.com/wallpapers/780/914/desktop-wallpaper-off-white-shoes-background-page-1-drip-shoes.jpg");
+            background-position: center;
+            background-size: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .wrapper{
+            height: 450px;
+            width: 700px;
+            background-color: #B4EBF5;
+            display: flex;
+        }
+        .img{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .img img{
+            height: 100%;
+            
+        }
+        .sign-in{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .sign-in form h1{
+            text-align: center;
+            font-size: 25px;
+            font-family: "Gill Sans", sans-serif;
+            margin: 20px;
+        }
+        .sign-in form{
+            width: 90%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+        .input-box{
+            width: 100%;
+            height: 45px;
+        }
+        .input-box input{
+            height: 100%;
+            width: 90%;
+            padding: 10px;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: gray;
+        }
+        .btn{
+            height: 35px;
+            display: flex;
+            justify-content: end;
+        }
+        .btn button{
+            background-color: #0096C7;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            width: 100px;
+            box-shadow: 1px 1px 8px black;
+            font-family: "Gill Sans", sans-serif;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="wrapper">
+        <div class="img">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/g/x/s/10-81838043-11-anta-white-green-original-imaggz5mdbn5abmf.jpeg?q=20" alt="">
+        </div>
+        <div class="sign-in">
+            <form action="">
+                <h1>Sign In</h1>
+                <div class="input-box">
+                    <i class='bx bxs-user'></i>
+                    <input type="text" placeholder="Username"
+                    required>
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-lock'></i>
+                   <input type="password"
+                   placeholder="password" required>
+                </div>
+                <div class="register-link">
+                    <a href="#">Forgot password?</a>
+                    <p>Don't have account yet? Click 
+                        <a href="#">Sign up</a></p>
+                </div>
+                <div class="btn">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    
+</body>
+</html>
