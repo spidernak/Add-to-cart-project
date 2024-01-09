@@ -1,32 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
-    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <!-- Include the Font Awesome stylesheet (assuming you're using Font Awesome for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-d3iRVK2dAyDHb3wn3oeTjz5z3t92ZMbY5NO08Qdm/EaO4Gg4q2MoBqNM7I5doSJP" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Hello</h1>
-    <table class="table table-dark table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Quantity</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- <tr th:each="Product : ${products}">
-                <td th:text="${Product.proID}"></td>
-                <td th:text="${Product.proName}"></td>
-                <td th:text="${Product.description}"></td>
-                <td th:text="${Product.quantity}"></td>
-                <td th:text="${Product.price}"></td>
-            </tr> -->
-        </tbody>
-    </table>
+
+<!-- Example of using a Font Awesome icon -->
+<div>
+    <i class="fas fa-cart-plus"></i> <!-- This will display a cart icon -->
+    <span> Add to Cart</span>
+</div>
+
+<!-- Example of iterating over a list and displaying icons -->
+<div th:each="product : ${productList}">
+    <i th:switch="${product.category}">
+        <i th:case="'Electronics'" class="fas fa-laptop"></i>
+        <i th:case="'Clothing'" class="fas fa-tshirt"></i>
+        <i th:case="'Books'" class="fas fa-book"></i>
+        <!-- Add more cases for other categories as needed -->
+        <i th:case="*" class="fas fa-question"></i> <!-- Default icon if no match is found -->
+    </i>
+    <span th:text="${product.name}"></span>
+</div>
+
 </body>
 </html>
