@@ -16,7 +16,7 @@ public class Registration {
     public String homepage(){
         return "Homepagelist";
     }
-<<<<<<< HEAD
+
     
      @GetMapping("/viewdetail")
     public String viewdetail(){
@@ -29,7 +29,7 @@ public class Registration {
     }
     
     
-=======
+
 
     @GetMapping("/signInUser")
     public String SignUser(){
@@ -47,5 +47,5 @@ public class Registration {
     public String Sign(){
         return "Register";
     }
->>>>>>> 9ca40f2c86db870b124bb5f88c65fa846c0226b8
+
 }
