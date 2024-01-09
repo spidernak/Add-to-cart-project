@@ -44,37 +44,28 @@
             </div>
         </div>
     </nav>
-    <!-- <main>
+    <main>
         <div class="cartpage">
             <h1>Carted</h1>
             <div class="cartlist">
-                <h3>Price</h3>
+                <a>Price</a>
                 <div class="cartedpro">
                     <div class="cartedimg">
-                        <img src="" alt="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpvn9KKRQ0Fxt0pTCeXieDHFcrc6QDERpyGg&usqp=CAU" alt="">
                     </div>
-                    <div class="text">
-                        <label th:text="${product.price}">Price:xxx</label>
-                        <label th:text="${product.size}">Size:xxx</label>
-                        <label th:text="${product.color}">Color:xxx</label>
-                        <div class="quantity">
-                            <label for="quantity1">Quantity</label>
-                            <div class="qtselect">
-                                <button type="button" onclick="decreaseQuantity('quantity1')">-</button>
-                                <input type="number" id="quantity1" name="quantity" th:value="${product.quantity}" readonly/>
-                                <button type="button" onclick="increaseQuantity('quantity1')">+</button>
-                            </div>
-                            <label th:text="${product.total}">Total:</label><br>
-    
-                            <button class="addtocart">
-                                Add to cart
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-                        </div>
+                    <div class="imagetext">
+                        <h3>Air Jordan 4 Frozen</h3>
+                  
+                        <label>Size:</label>
+                        <label>Color</label>
                     </div>
+                    <h4>Price:</h4>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                      </svg>
                 </div>
             </div>
-            <h3 th:text="${totalAmount}">Total:</h3>
+            <h2>Total:</h2>
             <div class="btn">
                 <a th:href="@{/homepagelist}">
                     <button>Back</button>
@@ -84,7 +75,7 @@
                 </a>
             </div>
         </div>
-    </main> -->
+    </main>
     
     
 </body>

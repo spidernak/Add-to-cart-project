@@ -1,9 +1,9 @@
-package se.project.add_to_cart_project.Model;
+package se.project.add_to_cart_project.Entity;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+// import org.springframework.web.bind.annotation.ModelAttribute;
+// import org.springframework.web.bind.annotation.PostMapping;
 
 
 
@@ -38,21 +38,15 @@ public class Registration {
         return "SignInUser";
     }
     
-    @PostMapping("/signInUser/login")
-    public String authenticate(@ModelAttribute User u ){
-        if(u.getEmail().equals("abc@gmail.com") && u.getPassword().equals("123")){
-            return "Homepagelist";
-        }
-        return "index";
-    }
+    // @PostMapping("/signInUser/login")
+    // public String authenticate(@ModelAttribute User u ){
+    //     if(u.getEmail().equals("abc@gmail.com") && u.getPassword().equals("123")){
+    //         return "Homepagelist";
+    //     }
+    //     return "index";
+    // }
 
-    @PostMapping("/singInadmin/login")
-    public String administrator(@ModelAttribute Admin a){
-        if(a.getEmail().equals("admin@gmail.com") && a.getPassword().equals("12345")){
-            return "viewproduct";
-        }
-        return "SignInAdmin";
-    }
+
 
 
     @GetMapping("/SignUp")

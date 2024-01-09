@@ -101,7 +101,7 @@
             <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/g/x/s/10-81838043-11-anta-white-green-original-imaggz5mdbn5abmf.jpeg?q=20" alt="">
         </div>
         <div class="sign-in">
-            <form action="/SignUp" th:action="@{/processSignUp}" method="post">
+            <form th:action="@{/main/SignUp}" method="post">
                 <h1>Sign Up</h1>
                 <div class="icon">
                     <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="">
@@ -110,26 +110,29 @@
                 </div>
                 <div class="input-box">
                     <i class='bx bxs-user'></i>
-                    <input type="text" placeholder="Username" th:field="${user.username}" required>
+                    <input type="text" placeholder="Username" id="username" name="username" autocomplete="username"
+                    required>
                 </div>
                 <div class="input-box">
-                    <i class='bx bxs-envelope'></i>
-                    <input type="email" placeholder="Gmail" th:field="${user.gmail}" required>
+                    <i class='bx bxs-envelope' ></i>
+                    <input type="mail" placeholder="Email" id="email" name="email" autocomplete="email"
+                    required>
                 </div>
                 <div class="input-box">
                     <i class='bx bxs-lock'></i>
-                    <input type="password" placeholder="Password" th:field="${user.password}" required>
+                   <input type="password" id="password" name="password" autocomplete="new-password"
+                   placeholder="password" required>
                 </div>
                 <div class="register-link">
-                    <p>Already have an account yet? Click
-                        <a th:href="@{/signInUser}">Sign in</a>
-                    </p>
+                    <p>Already have account yet? Click
+                        <a th:href="@{/main/SignIn}">Sign in</a></p>
                 </div>
                 <div class="btn">
-                    <button type="submit">Sign Up</button>
+                    <a th:href="@{/main/SignIn}">
+                        <button type="submit">Sign Up</button>
+                    </a>
                 </div>
             </form>
-            
         </div>
 
     </div>
