@@ -93,16 +93,16 @@
             <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/g/x/s/10-81838043-11-anta-white-green-original-imaggz5mdbn5abmf.jpeg?q=20" alt="">
         </div>
         <div class="sign-in">
-            <form action="">
+            <form action="/signInUser/login" method="post">
                 <h1>Sign In</h1>
                 <div class="input-box">
                     <i class='bx bxs-user'></i>
-                    <input type="text" placeholder="Username"
+                    <input type="text" placeholder="Username" name="email"
                     required>
                 </div>
                 <div class="input-box">
                     <i class='bx bxs-lock'></i>
-                   <input type="password"
+                   <input type="password" name="password"
                    placeholder="password" required>
                 </div>
                 <div class="register-link">
@@ -111,7 +111,9 @@
                         <a th:href="@{/SignUp}">Sign up</a></p>
                 </div>
                 <div class="btn">
-                    <button type="submit">Sign Up</button>
+                    <a th:href="@{/homepagelist}">
+                        <button type="submit">Sign In</button>
+                    </a>
                 </div>
             </form>
         </div>

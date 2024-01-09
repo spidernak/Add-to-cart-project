@@ -6,6 +6,7 @@
     <title>Product details</title>
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
     <link rel="stylesheet" th:href="@{/css/viewstyle.css}">
+    
 </head>
 <body>
     <nav>
@@ -23,27 +24,32 @@
                           </svg>
                     </div>
                 </div>
-                <div class="icon">
-                    <div class="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
-                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
-                          </svg>
-                    </div>
-                    <div class="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                          </svg>
-                    </div>
-                    <img src="./asset/image1.jpg" alt="profile">
-                </div>
             </div>
         </ul>
+        <div class="icon">
+            <div class="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+                  </svg>
+            </div>
+            <div class="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                  </svg>
+            </div>
+            <div class="profile">
+                <img src="./asset/image1.jpg" alt="profile">
+                <div class="logout">
+                    Log out
+                </div>
+            </div>
+        </div>
     </nav>
     <main>
         <div class="detail">
             <div class="productdetail">
                 <a th:href="@{/homepagelist}">
-                    <div class="">
+                    <div class="backicon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
                             <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
                           </svg>
@@ -70,17 +76,24 @@
                     </div>
                 </div>
                 <div class="quantity">
-                    <label>Quantity</label>
+                    <div class="qtselect">
+                        <label>Quantity</label>
                     <div class="qtselect">
                         <button onclick="decreaseQuantity()">-</button>
                         <span id="quantityValue">1</span>
                         <button onclick="increaseQuantity()">+</button>
                     </div>
                     <label>Total:</label><br>
+                    </div>
             
                     <button class="addtocart">
-                        Add to cart
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <label>Add to cart</label>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                              </svg>
+                        </div>
                     </button>
                 </div>
             </div>
@@ -88,42 +101,42 @@
                 <label class="rec">Recommended</label><br>
                 <div class="recpro">  
                     <div class="recimg">
-                        <img src="https://m.media-amazon.com/images/I/71rv1afEz6L._AC_UL320_.jpg" alt="">
+                        <img src="https://th.bing.com/th/id/OIP.HjUZn1CaGv7oJriUNw0ZlwHaFM?w=277&h=194&c=7&r=0&o=5&pid=1.7" alt="">
                     </div>
                     <div class="text">
-                        <label>Price:xxx</label>
-                        <label>size:xxx</label>
-                        <label>color:xxx</label>
+                        <h3>Nike Air Fouce 1</h3>
+                        <label>size:40</label>
+                        <label>Price: 200$</label>
                     </div>
                 </div>
                 <div class="recpro">  
                     <div class="recimg">
-                        <img src="" alt="">
+                        <img src="https://th.bing.com/th/id/OIP.HjUZn1CaGv7oJriUNw0ZlwHaFM?w=277&h=194&c=7&r=0&o=5&pid=1.7" alt="">
                     </div>
                     <div class="text">
-                        <label>Price:xxx</label>
-                        <label>size:xxx</label>
-                        <label>color:xxx</label>
+                        <h3>Nike Air Fouce 1</h3>
+                        <label>size:40</label>
+                        <label>Price: 200$</label>
                     </div>
                 </div>
                 <div class="recpro">  
                     <div class="recimg">
-                        <img src="" alt="">
+                        <img src="https://th.bing.com/th/id/OIP.HjUZn1CaGv7oJriUNw0ZlwHaFM?w=277&h=194&c=7&r=0&o=5&pid=1.7" alt="">
                     </div>
                     <div class="text">
-                        <label>Price:xxx</label>
-                        <label>size:xxx</label>
-                        <label>color:xxx</label>
+                        <h3>Nike Air Fouce 1</h3>
+                        <label>size:40</label>
+                        <label>Price: 200$</label>
                     </div>
                 </div>
                 <div class="recpro">  
                     <div class="recimg">
-                        <img src="" alt="">
+                        <img src="https://th.bing.com/th/id/OIP.HjUZn1CaGv7oJriUNw0ZlwHaFM?w=277&h=194&c=7&r=0&o=5&pid=1.7" alt="">
                     </div>
                     <div class="text">
-                        <label>Price:xxx</label>
-                        <label>size:xxx</label>
-                        <label>color:xxx</label>
+                        <h3>Nike Air Fouce 1</h3>
+                        <label>size:40</label>
+                        <label>Price: 200$</label>
                     </div>
                 </div>
             </div>

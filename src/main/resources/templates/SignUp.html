@@ -101,7 +101,7 @@
             <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/g/x/s/10-81838043-11-anta-white-green-original-imaggz5mdbn5abmf.jpeg?q=20" alt="">
         </div>
         <div class="sign-in">
-            <form action="">
+            <form action="/SignUp" th:action="@{/processSignUp}" method="post">
                 <h1>Sign Up</h1>
                 <div class="icon">
                     <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="">
@@ -110,27 +110,26 @@
                 </div>
                 <div class="input-box">
                     <i class='bx bxs-user'></i>
-                    <input type="text" placeholder="Username"
-                    required>
+                    <input type="text" placeholder="Username" th:field="${user.username}" required>
                 </div>
                 <div class="input-box">
-                    <i class='bx bxs-envelope' ></i>
-                    <input type="mail" placeholder="Gmail"
-                    required>
+                    <i class='bx bxs-envelope'></i>
+                    <input type="email" placeholder="Gmail" th:field="${user.gmail}" required>
                 </div>
                 <div class="input-box">
                     <i class='bx bxs-lock'></i>
-                   <input type="password"
-                   placeholder="password" required>
+                    <input type="password" placeholder="Password" th:field="${user.password}" required>
                 </div>
                 <div class="register-link">
-                    <p>Already have account yet? Click
-                        <a th:href="@{/signInUser}">Sign in</a></p>
+                    <p>Already have an account yet? Click
+                        <a th:href="@{/signInUser}">Sign in</a>
+                    </p>
                 </div>
                 <div class="btn">
                     <button type="submit">Sign Up</button>
                 </div>
             </form>
+            
         </div>
 
     </div>
