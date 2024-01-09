@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #CAF0F8;
+            background-size: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        };
+        .btn-all{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .btn{
+            margin: 20px 0;
+            width: 250px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            border-radius: 30px;
+            box-shadow: 1px 1px 5px black;
+            border: none;
+            font-size: 15px;
+            font-family: "Gill Sans", sans-serif;
+        }
+        .btn-1{
+            background-color: #023E8A;
+            color: #F6F6F6;
+            text-decoration: none;
+        }
+        .btn-2{
+            background-color: #0350B5;
+            color: black;
+            text-decoration: none;
+        }
+
+</style>
+<body>
+    <div class="btn-all">
+        <a class="btn btn-1" th:href="@{/signInUser}">Login as user</a>
+        <a class="btn btn-2" th:href="@{/signinadmin}">Login as admin</a>
+    </div>
+</body>
+</html>
