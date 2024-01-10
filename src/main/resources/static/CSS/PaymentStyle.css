@@ -1,0 +1,174 @@
+.line{
+    width: 1022px;
+    border: 1px solid black;
+    
+}
+.frame{
+    width: 1168px;
+    height: 1518px;
+    background-color: #E6E6E6;
+    border-radius: 25px;
+    padding-left: 64px;
+    padding-top: 68px;
+}
+h1{
+    color: #000;
+font-family: Hind Jalandhar;
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+h2{
+    color: #000;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-decoration-line: underline;
+}
+t1{
+    color: #000;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-left: 20px;
+}
+.nameIP{
+    width: 430px;
+height: 71px;
+flex-shrink: 0;
+border-radius: 17px;
+border: 1px solid #8D8D8D;
+background: #DEF2F6;
+color: #8D8D8D;
+font-family: Inter;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-left: 31px;
+}
+.CountryIP{
+    width: 234px;
+height: 71px;
+flex-shrink: 0;
+border-radius: 17px;
+border: 1px solid #8D8D8D;
+background: #DEF2F6;
+color: #8D8D8D;
+font-family: Inter;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-left: 31px;
+}
+.CityIP{
+    width: 234px;
+height: 71px;
+flex-shrink: 0;
+border-radius: 17px;
+border: 1px solid #8D8D8D;
+background: #DEF2F6;
+color: #8D8D8D;
+font-family: Inter;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-left: 31px;
+}
+.PostIP{
+    width: 449px;
+    height: 71px;
+    flex-shrink: 0;
+border-radius: 17px;
+border: 1px solid #8D8D8D;
+background: #DEF2F6;
+color: #8D8D8D;
+font-family: Inter;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-left: 31px;
+}
+.space{
+    padding: 20px;
+}
+.address{
+    width: 1020px;
+height: 71px;
+flex-shrink: 0;
+border-radius: 17px;
+border: 1px solid #8D8D8D;
+background: #DEF2F6;
+color: #8D8D8D;
+font-family: Inter;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-left: 31px;
+}
+.PhoneIP{
+    width: 449px;
+height: 71px;
+flex-shrink: 0;
+border-radius: 17px;
+border: 1px solid #8D8D8D;
+background: #DEF2F6;
+color: #8D8D8D;
+font-family: Inter;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-left: 31px;
+}
+.ExIP{
+    width: 470px;
+height: 71px;
+border-radius: 17px;
+border: 1px solid #8D8D8D;
+background: #DEF2F6;
+color: #8D8D8D;
+font-family: Inter;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-left: 31px;
+}
+.form-check-input{
+    width: 24px;
+height: 22px;
+flex-shrink: 0;
+}
+t3{
+    color: #000;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.bluebtn{
+    width: 214px;
+height: 75px;
+flex-shrink: 0;
+border-radius: 15px;
+background: #0096C7;
+color: #FFF;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border: none;
+translate: 600px 100px;
+}

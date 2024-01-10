@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{/css/PaymentStyle.css}" rel="stylesheet" />
+</head>
+<body>
+    <div class="frame">
+        <h1>Payment</h1>
+        <div class="line"></div>
+        <h2>Delivery</h2>
+    
+        <div class="name" style="display: flex; flex-direction: column;">
+            <t1>Name</t1> <input class="nameIP" type="text">
+        </div>
+        <div class="space"></div>
+        <div style="display: flex;">
+            <div class="name" style="display: flex; flex-direction: column;">
+                <t1>Country</t1> <input class="CountryIP" type="text">
+            </div>
+            <div class="space"></div>
+            <div class="name" style="display: flex; flex-direction: column;">
+                <t1>City</t1> <input class="CityIP" type="text">
+            </div>
+            <div class="space"></div>
+            <div class="name" style="display: flex; flex-direction: column;">
+                <t1>Post code</t1> <input class="PostIP" type="text">
+            </div>
+        
+        </div>
+        <div class="space"></div>
+        <div class="name" style="display: flex; flex-direction: column;">
+            <t1>Address</t1> <input class="address" type="text">
+            <div class="space"></div>
+            <div class="name" style="display: flex; flex-direction: column;">
+                <t1>Phone number</t1> <input class="PhoneIP" type="text">
+                <div class="space"></div>
+                <div class="line"></div>
+    
+                <h2>Payment</h2>
+    
+                <div class="name" style="display: flex; flex-direction: column;">
+                    <t1>Card number</t1> <input class="address" type="text" placeholder="xxxx - xxxx - xxxx - xxxx">
+                    <div class="space"></div>
+                    <div style="display: flex; ">
+                        <div class="name" style="display: flex; flex-direction: column;">
+                            <t1>Expiration date</t1> <input class="ExIP" type="text" placeholder="MM/YY"></div>
+                            <div class="space"></div>
+                            <div class="name" style="display: flex; flex-direction: column;">
+                                <t1>Security code</t1> <input class="ExIP" type="text" placeholder="Security code"></div>
+                    </div>
+                    <div class="space"></div>
+                    <div class="name" style="display: flex; flex-direction: column;">
+                        <t1>Name on card</t1> <input class="address" type="text">
+                        <div class="space"></div>
+    
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
+                            <t3>Print recipt as pdf</t3>
+                          </label>
+                        </div>
+    
+                        <div style="display: flex;">
+                        <button class="bluebtn">Discard</button>
+                        <div class="space"></div>
+                        <button class="bluebtn">BUY NOW</button>
+    
+                        </div>
+    
+        </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+button{
+    width: 281px;
+height: 58px;
+flex-shrink: 0;
+border-radius: 15px;
+background: #D9D9D9;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+margin-bottom: 24px;
+margin-left: 36px;
+border: none;
+}
+.left-bar{
+    width: 379px;
+height: 1117px;
+background: #DEF2F6;
+padding-top: 64px;
+}
+#logout{
+    margin-top: 730px;
+    color: red;
+}
+.picture{
+    width: 303px;
+height: 346px;
+background: #D9D9D9;
+margin-top: 135px;
+margin-left: 118px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+input{
+    width: 369px;
+height: 71px;
+border-radius: 12px;
+border: 1px solid #8D8D8D;
+/* color: #000; */
+font-family: Abyssinica SIL;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-left: 10px;
+}
+t1{
+    color: #000;
+font-family: Abyssinica SIL;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 15px;
+}
+.space{
+    padding: 18px;
+}
+.Insert{
+    width: 263px;
+height: 87px;
+border-radius: 20px;
+background: #0096C7;
+color: #F6F6F6;
+font-family: Adamina;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border: none;
+translate:680px 80px;
+}
