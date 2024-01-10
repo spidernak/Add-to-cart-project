@@ -200,6 +200,7 @@ a {
  }
  .carticon i{
     font-size: 30px;
+    margin-right: 90px;
  }
  
  /* CSS for Footer */
@@ -234,6 +235,9 @@ a {
  
  .footer-section h2 {
     color: #fff;
+ }
+ .conatacicon svg{
+   cursor: pointer;
  }
  
  .footer-section p {

@@ -32,11 +32,13 @@
                     <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
                   </svg>
             </div>
-            <div class="cart">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                  </svg>
-            </div>
+            <a th:href="@{/carted}">
+                <div class="cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                      </svg>
+                </div>
+            </a>
             <div class="profile">
                 <div th:each="user : ${user}" class="profile">
                     <h2 th:text="${user.userName}"></h2>
@@ -59,7 +61,19 @@
                           </svg>
                     </div>
                 </a>
-                <div class="proimg">
+                <!-- <div class="proimg">
+                    <img th:src="@{${'/Asset/'+product.image}}" alt="">
+                    <div class="imagetext">
+                        <h1 th:text="${product.name}"></h1>
+                        <label>Price:</label>
+                        <p th:text="${'Price: ' + product.price}"></p>
+                        <label>Size:</label>
+                        <p th:text="${'Size: ' + product.size}"></p>
+                        <label>Description:</label>
+                        <p th:text="${product.description}"></p>
+                    </div>
+                </div> -->
+                <div  class="proimg">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpvn9KKRQ0Fxt0pTCeXieDHFcrc6QDERpyGg&usqp=CAU" alt="">
                     <div class="imagetext">
                         <h1>Air Jordan 4 Frozen</h1>
@@ -68,7 +82,8 @@
                         <label>Descriiption:</label>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore accusantium eaque, eveniet nemo sed dolores laudantium repudiandae suscipit quo et. Repudiandae impedit incidunt odio dolore tempora voluptatem at quae sed.</p>
                     </div>
-                </div>
+                </div> 
+                
                 <div class="select">
                     <label>color:</label>
                     <div class="color">
@@ -90,15 +105,17 @@
                         <!-- <label>Total:</label><br> -->
                     </div>
             
-                    <button class="addtocart">
-                        <label>Add to cart</label>
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
-                                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
-                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                              </svg>
-                        </div>
-                    </button>
+                    <a th:href="@{/Homepage}">
+                        <button type="submit" class="addtocart">
+                            <label>Add to cart</label>
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                  </svg>
+                            </div>
+                        </button>
+                    </a>
                 </div>
             </div>
             <div class="recommended">

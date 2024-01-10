@@ -14,6 +14,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import se.project.add_to_cart_project.Entity.Product;
 import se.project.add_to_cart_project.Entity.User;
+import se.project.add_to_cart_project.Repository.ProductRepository;
 import se.project.add_to_cart_project.Service.UserService;
 
 
@@ -26,6 +27,9 @@ public class UserController {
     @Autowired
     private UserService service;
 
+    @Autowired
+    private ProductRepository pr;
+
     @GetMapping("/Log_In")
     public String Log_In() {
         return "SignIn";
@@ -35,7 +39,9 @@ public class UserController {
         return "AdminHome";
     }
     @GetMapping("/Homepage")
-    public String Homepagelist(){
+    public String Homepagelist(org.springframework.ui.Model m){
+
+        m.addAttribute("products", pr.findAll());
         return "Homepagelist";
     }
 
@@ -64,6 +70,8 @@ public class UserController {
         }
         return "redirect:/";
     }
+
+
     @GetMapping("/SignUp")
         public String signUp(){
             return "SignUp";
@@ -108,35 +116,16 @@ public class UserController {
             return "viewproduct";
         }
 
-
-
-
-
-@GetMapping("/User_List")
-public String User_List(Model model, HttpSession session) {
-    // Check if the user is authenticated
-    if (session.getAttribute("authenticatedUser") == null) {
-        // Redirect to the login page if not authenticated
-        return "redirect:/Homepagelist";
-    }
-
-    // Check the role of the authenticated user
-    User authenticatedUser = (User) session.getAttribute("authenticatedUser");
-    if (!"admin".equals(authenticatedUser.getRole())) {
-        // Redirect to the appropriate home page based on the user's role
-        if ("user".equals(authenticatedUser.getRole())) {
-            return "redirect:/Homepagelist";
+    @GetMapping("/payment")
+        public String payment(){
+            return "PaymentPage";
         }
-    }
 
-    // Fetch all users from the database
-    List<User> userList = service.getAllUsers();
+    
 
-    // Add the user list to the Thymeleaf model
-    // model.addAttribute("userList", userList);
 
-    return "UserList";
-}
+
+
 
 
     

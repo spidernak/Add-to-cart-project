@@ -11,7 +11,7 @@
     <nav>
         <label>logo</label>
         <ul>
-            <li> <a href="#">Home</a></li>
+            <li> <a th:href="@{/Homepage}">Home</a></li>
             <li> <a href="#">About us</a></li>
             <li> <a href="#">Contact</a></li>
             <div class="searchandpro">
@@ -37,12 +37,14 @@
                   </svg>
             </div>
             <div class="profile">
-                <img src="./asset/image1.jpg" alt="profile">
-                <a th:href="@{/log_out}">
-                    <div class="logout">
-                        Log out
-                    </div>
-                </a>
+                <div th:each="user : ${user}" class="profile">
+                    <h2 th:text="${user.userName}"></h2>
+                </div>
+                 <a th:href="@{/Log_In}">
+                        <div class="logout">
+                            Log out
+                        </div>
+                    </a>
             </div>
         </div>
     </nav>
@@ -52,11 +54,12 @@
             <div class="cartlist">
                 <a>Price</a>
                 <div class="cartedpro">
-                    <div class="cartedimg">
+                    <div  class="cartedimg">
+                        <!-- <img th:src="@{${'/Asset' + product.image}}" alt=""> -->
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpvn9KKRQ0Fxt0pTCeXieDHFcrc6QDERpyGg&usqp=CAU" alt="">
                     </div>
                     <div class="imagetext">
-                        <h3>Air Jordan 4 Frozen</h3>
+                        <h3 >Air Jordan 4 Frozen</h3>
                   
                         <label>Size:</label>
                         <label>Color</label>
@@ -64,12 +67,12 @@
                     <h4>Price:</h4>
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                         <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
-                      </svg>
+                    </svg>
                 </div>
             </div>
             <h2>Total:</h2>
             <div class="btn">
-                <a th:href="@{/homepagelist}">
+                <a th:href="@{/Homepage}">
                     <button>Back</button>
                 </a>
                 <a th:href="@{/payment}">

@@ -11,7 +11,7 @@
     <nav>
         <label>logo</label>
         <ul>
-            <li> <a href="#">Home</a></li>
+            <li> <a th:href="@{/carted}">Home</a></li>
             <li> <a href="#">About us</a></li>
             <li> <a href="#">Contact</a></li>
             <div class="searchandpro">
@@ -101,10 +101,12 @@
                         </div>
     
                         <div style="display: flex;">
-                        <button class="bluebtn">Discard</button>
-                        <div class="space"></div>
-                        <button class="bluebtn">BUY NOW</button>
-    
+                            <a href="@{/carted}">
+                                <button type="button" class="bluebtn">Discard</button>
+                            </a>
+                            <div class="space"></div>
+                            <button class="bluebtn">BUY NOW</button>
+        
                         </div>
     
         </div>
