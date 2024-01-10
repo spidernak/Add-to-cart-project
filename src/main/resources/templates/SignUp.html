@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <title>Sign Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
@@ -111,18 +112,15 @@
                 <div class="input-box">
                     <i class='bx bxs-user'></i>
                     <input type="text" id="username" th:name="username" autocomplete="" placeholder="username" required>
-                    <input type="text" id="email" th:name="email" autocomplete="" placeholder="email" required>
-                    <input type="password" id="password" th:name="password" autocomplete="" placeholder="password    " required>
-                    </div>
                 </div>
-                <!-- <div class="input-box">
+                <div class="input-box">
                     <i class='bx bxs-envelope' ></i>
-                    <input type="mail" placeholder="Email" id="email" name="email" autocomplete="email" required>
+                    <input type="text" id="email" th:name="email" autocomplete="" placeholder="email" required>
                 </div>
                 <div class="input-box">
                     <i class='bx bxs-lock'></i>
-                    <input type="password" id="password" name="password" autocomplete="new-password" required>            
-                </div> -->
+                    <input type="password" id="password" th:name="password" autocomplete="" placeholder="password    " required>         
+                </div>
                 <div class="register-link">
                     <p>Already have account yet? Click
                         <a th:href="@{/Log_In}">Sign in</a></p>

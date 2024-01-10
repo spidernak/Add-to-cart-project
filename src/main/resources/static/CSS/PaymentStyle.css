@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+    width: 100%;
+ }
 .line{
     width: 1022px;
     border: 1px solid black;
@@ -10,6 +16,7 @@
     border-radius: 25px;
     padding-left: 64px;
     padding-top: 68px;
+  
 }
 nav {
     background-color: #48e0ff;
@@ -258,3 +265,4 @@ line-height: normal;
 border: none;
 translate: 600px 100px;
 }
+

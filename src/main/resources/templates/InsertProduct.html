@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Insert Product</title>
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
     <link th:href="@{/css/InsertPageStyle.css}" rel="stylesheet" />
 </head>
@@ -32,11 +32,13 @@
                   </svg>
             </div>
             <div class="profile">
-                <img src="./asset/image1.jpg" alt="profile">
+                <div th:each="user : ${user}" class="profile">
+                    <h2 th:text="${user.userName}"></h2>
+                </div>
                 <a th:href="@{/Log_In}">
-                    <div class="logout">
-                        Log out
-                    </div>
+                        <div class="logout">
+                            Log out
+                        </div>
                 </a>
             </div>
         </div>
@@ -46,40 +48,45 @@
         <button>insert product</button>
         <button>view product</button>
         <button>update product</button>
-        <button id="logout">Log out</button>
+        <button>delete product</button>
+        <a th:href="@{/Log_In}">
+            <button id="logout">Log out</button>
+        </a>
         </div>
 <div style="display: flex;flex-direction: column;">
 <div style="display: flex;">
 
-    <form th:action="@{/insertproduct}" method="post" th:object="${user}">
-        <div class="mb-3">
-            <label for="name" class="form-label">Product Name:</label>
-            <input type="text" class="form-control" id="ProductName" name="ProductName" required>
-        </div>
-        <div class="mb-3">
-            <label for="price" class="form-label">Size:</label>
-            <input type="text" class="form-control" id="size" name="size" required>
-        </div>
-        <div class="mb-3">
-            <label for="price" class="form-label">Color:</label>
-            <input type="text" class="form-control" id="color" name="color" required>
-        </div>
-        <div class="mb-3">
-            <label for="formFile" class="form-label">Product Image</label>
-            <input class="form-control" type="file" id="image" name="image" required>
-          </div>
-        <div class="mb-3">
-            <label for="price" class="form-label">Price:</label>
-            <input type="text" class="form-control" id="price" name="price" required>
-        </div>
-        <div class="mb-3">
-            <label for="description" class="form-label">Description:</label>
-            <input type="text" class="form-control" id="description" name="description" required>
-        </div>
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary">Insert</button>
-        </div>
-    </form>
+    <div style="margin-left: 50%;">
+        <form th:action="@{/insertproduct}" method="post" th:object="${user}" style="border: solid grey 2px; display: flex; flex-direction: column; padding-right: 50px; padding-left: 50px;margin-top: 30px; width: 200%; border-radius: 20px; box-shadow: 20px grey;">
+            <div class="mb-3">
+                <label for="name" class="form-label">Product Name:</label>
+                <input type="text" class="form-control" id="ProductName" name="ProductName" required>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Size:</label>
+                <input type="text" class="form-control" id="size" name="size" required>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Color:</label>
+                <input type="text" class="form-control" id="color" name="color" required>
+            </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Product Image</label>
+                <input class="form-control" type="file" id="image" name="image" required>
+              </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Price:</label>
+                <input type="text" class="form-control" id="price" name="price" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description:</label>
+                <input type="text" class="form-control" id="description" name="description" required>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Insert</button>
+            </div>
+        </form>
+    </div>
     
 
 </div>
