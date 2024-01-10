@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buylist</title>
+   
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{/css/BuyListstyle.css}" rel="stylesheet" />
+</head>
+<body>
+    
+
+
+        <div style="display: flex; ">
+            <div class="left-bar" style="display: flex;flex-direction: column;">
+            <button>insert product</button>
+            <button>view product</button>
+            <button>update product</button>
+            <button id="logout">Log out</button>
+            
+            
+            </div>
+    
+    
+        <table class="table-striped">
+            <thead>
+                <tr>
+                    <th class="order">Order ID</th>
+                    <th class="Product">Product ID</th>
+                    <th class="Quantity">Quantity</th>
+                    <th class="user">Username</th>
+                    <th class="pay">payment</th>
+                </tr>
+            </thead>
+        </table>
+        </div>
+    
+    
+    
+    
+</body>
+</html>
