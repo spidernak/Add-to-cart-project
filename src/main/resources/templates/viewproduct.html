@@ -62,15 +62,14 @@
                     </div>
                 </a>
                 <!-- <div class="proimg">
-                    <img th:src="@{${'/Asset/'+product.image}}" alt="">
+                    <img th:src="@{${'/Asset/' + product.image}}" alt=""/>
                     <div class="imagetext">
-                        <h1 th:text="${product.name}"></h1>
-                        <label>Price:</label>
-                        <p th:text="${'Price: ' + product.price}"></p>
-                        <label>Size:</label>
-                        <p th:text="${'Size: ' + product.size}"></p>
+                        <h1 th:text="${product.productName}"></h1>
+                        <label th:text="'Price: ' + ${product.price}"></label>
+                        <label th:text="'Size: ' + ${product.size}"></label>
+                        <label th:text="'Color: ' + ${product.color}"></label>
                         <label>Description:</label>
-                        <p th:text="${product.description}"></p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
                     </div>
                 </div> -->
                 <div  class="proimg">

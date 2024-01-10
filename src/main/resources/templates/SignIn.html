@@ -119,8 +119,22 @@
             </form>
             
         </div>
-
+         
     </div>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        document.addEventListener('DOMContentLoaded', function() {
+            var logInError = /*[[${LogInError}]]*/ null;
+    
+            if (logInError) {
+                alert(logInError);
+            }
+        });
+        /*]]>*/
+    </script>
+    
+
+    
     
 </body>
 </html>
