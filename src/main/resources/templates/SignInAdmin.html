@@ -93,25 +93,28 @@
             <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/g/x/s/10-81838043-11-anta-white-green-original-imaggz5mdbn5abmf.jpeg?q=20" alt="">
         </div>
         <div class="sign-in">
-            <form th:action="@{/main/Login}" method="post">
+            <form th:action="@{/Lo gin}" method="post">
                 <h1>Sign In</h1>
                 <div class="input-box">
                     <i class='bx bxs-user'></i>
-                    <input type="text" placeholder="Username" id="username" autocomplete="username"
+                    <input type="text" placeholder="Username" id="username" autocomplete="username" th:name="username"
                     required>
                 </div>
                 <div class="input-box">
                     <i class='bx bxs-lock'></i>
-                   <input type="password" id="password" name="password" autocomplete="current-password"
+                   <input type="password" id="password" th:name="password" autocomplete="current-password"
                    placeholder="password" required>
                 </div>
                 <div class="register-link">
                     <a href="#">Forgot password?</a>
                     <p>Don't have account yet? Click 
-                        <a th:href="@{/main/Login}">Sign up</a></p>
+                        <a th:href="@{/Log_in}">Sign up</a></p>
                 </div>
                 <div class="btn">
-                    <button type="submit">Sign In</button>
+                    <a th:href="@{/Buylist}">
+                        <button type="button">Sign In</button>
+                    </a>
+                    
                 </div>
             </form>
             <div class="alert alert-danger text-center mt-3" th:if="${LogInError}">

@@ -14,26 +14,26 @@ public class UserService {
      @Autowired
    private UserRepository userRepo;
 
-   // public User authenticateUser(String userName, String password) {
-   //    User user = userRepo.findByUserName(userName);
+   public User authenticateUser(String userName, String password) {
+      User user = userRepo.findByUserName(userName);
 
-   //    if (user != null && user.getPassword().equals(password)) {
-   //        return user;
-   //    }
+      if (user != null && user.getPassword().equals(password)) {
+          return user;
+      }
 
-   //    return null;
-   // }
+      return null;
+   }
 
-   // public boolean alreadyExists(String username) {
-   //    return userRepo.findByUserName(username) != null;
-   // }
+   public boolean alreadyExists(String userName) {
+      return userRepo.findByUserName(userName) != null;
+   }
 
    public Optional<User> getUserById(Long id) {
       return userRepo.findById(id);
    } 
   
-   public void save(User user) {
-      userRepo.save(user);
+   public void save(User newUser) {
+      userRepo.save(newUser);
    }
 
    public List<User> getAllUsers(){

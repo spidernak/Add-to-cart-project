@@ -16,6 +16,92 @@
     margin-left: 65px;
     margin-top: 46px;
 }
+.cart{
+   cursor: pointer;
+   width: 20px;
+}
+nav {
+    background-color: #48e0ff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#222
+ }
+ nav label{
+    display: flex;
+    float: left;
+ }
+ ul {
+    width: 90%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    color:#222;
+ }
+ li {
+    margin-left: 3rem;
+    
+ }
+ a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    color:#222;
+ }
+ .searchandpro{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 76%;
+ }
+ .search input{
+    width: 350px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    color : grey;
+    padding-left: 15px;
+ }
+ .logout{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .profile{
+    display: flex;
+    gap:20px;
+ }
+ 
+ .search svg{
+    color:grey;
+    font-size: 20px;
+    position: absolute;
+    transform: translate(320px ,-28px);
+ }
+ .icon {
+    cursor: pointer;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    justify-content:end;
+    align-items: center;
+    width: 20%;
+    margin-right: 3rem;
+ }
+ 
+ .icon img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: solid 2px grey;
+ }
 .order{
     width: 171px;
 }

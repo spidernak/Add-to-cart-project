@@ -93,17 +93,15 @@
             <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/g/x/s/10-81838043-11-anta-white-green-original-imaggz5mdbn5abmf.jpeg?q=20" alt="">
         </div>
         <div class="sign-in">
-            <form action="/signInUser/login" method="post">
+            <form th:action="@{/Log_In}" method="post">
                 <h1>Sign In</h1>
                 <div class="input-box">
                     <i class='bx bxs-user'></i>
-                    <input type="text" placeholder="Username" name="email"
-                    required>
+                    <input type="text"  id="username" name="username" autocomplete="username" required>
                 </div>
                 <div class="input-box">
                     <i class='bx bxs-lock'></i>
-                   <input type="password" name="password"
-                   placeholder="password" required>
+                    <input type="password"  id="password" name="password" autocomplete="current-password" required>
                 </div>
                 <div class="register-link">
                     <a href="#">Forgot password?</a>
@@ -111,11 +109,25 @@
                         <a th:href="@{/SignUp}">Sign up</a></p>
                 </div>
                 <div class="btn">
-                    <a th:href="@{/homepagelist}">
+                    
                         <button type="submit">Sign In</button>
-                    </a>
+                    
                 </div>
             </form>
+            <!-- <form th:action="@{/Log_In}" method="post">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username:</label>
+                    <input type="text" class="form-control" id="username" name="username" autocomplete="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password" autocomplete="current-password" required>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Log In</button>
+                    <p class="mt-2">Don't have an account? <a th:href="@{/SignUp}">Register</a></p>
+                </div>
+            </form> -->
         </div>
 
     </div>

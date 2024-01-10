@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buylist</title>
+   
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{/css/BuyListstyle.css}" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <label>logo</label>
+        <ul>
+            <li> <a href="#">Home</a></li>
+            <li> <a href="#">About us</a></li>
+            <li> <a href="#">Contact</a></li>
+            <div class="searchandpro">
+                <div class="search">
+                    <input type="search" value="Search">
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                          </svg>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        <div class="icon">
+            <div class="cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+                  </svg>
+            </div>
+            <div class="profile">
+                <!-- <h2> <span th:text="${user.username}"></span></h2> -->
+                <a th:href="@{/Log_In}">
+                    <div class="logout">
+                        Log out
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+        <div style="display: flex; ">
+            <div class="left-bar" style="display: flex;flex-direction: column;">
+            <a  th:href="@{/insertproduct}">
+                <button >insert product</button>
+            </a>
+            <button>view product</button>
+            <button>update product</button>
+            <button id="logout">Log out</button>
+            
+            
+            </div>
+    
+    
+        <table class="table-striped">
+            <thead>
+                <tr>
+                    <th class="order">Order ID</th>
+                    <th class="Product">Product ID</th>
+                    <th class="Quantity">Quantity</th>
+                    <th class="user">Username</th>
+                    <th class="pay">payment</th>
+                </tr>
+            </thead>
+        </table>
+        </div>
+    
+    
+    
+    
+</body>
+</html>

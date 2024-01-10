@@ -86,6 +86,10 @@ a {
    width: 20%;
    margin-right: 3rem;
 }
+.cart{
+   cursor: pointer;
+   width: 20px;
+}
 
 .icon img {
    height: 40px;

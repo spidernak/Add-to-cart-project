@@ -27,28 +27,32 @@
             </div>
         </ul>
         <div class="icon">
-            <div class="">
+            <div class="cart">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
                     <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
                   </svg>
             </div>
-            <div class="">
+            <div class="cart">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
                   </svg>
             </div>
             <div class="profile">
-                <img src="./asset/image1.jpg" alt="profile">
-                <div class="logout">
-                    Log out
+                <div th:each="user : ${user}" class="profile">
+                    <h2 th:text="${user.userName}"></h2>
                 </div>
+                 <a th:href="@{/Log_In}">
+                        <div class="logout">
+                            Log out
+                        </div>
+                    </a>
             </div>
         </div>
     </nav>
     <main>
         <div class="detail">
             <div class="productdetail">
-                <a th:href="@{/homepagelist}">
+                <a th:href="@{/Homepage}">
                     <div class="backicon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
                             <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
@@ -78,12 +82,12 @@
                 <div class="quantity">
                     <div class="qtselect">
                         <label>Quantity</label>
-                    <div class="qtselect">
-                        <button onclick="decreaseQuantity()">-</button>
-                        <span id="quantityValue">1</span>
-                        <button onclick="increaseQuantity()">+</button>
-                    </div>
-                    <label>Total:</label><br>
+                        <div class="qtselect">
+                            <button onclick="decreaseQuantity()">-</button>
+                            <span id="quantityValue">1</span>
+                            <button onclick="increaseQuantity()">+</button>
+                        </div>
+                        <!-- <label>Total:</label><br> -->
                     </div>
             
                     <button class="addtocart">
@@ -105,7 +109,7 @@
                     </div>
                     <div class="text">
                         <h3>Nike Air Fouce 1</h3>
-                        <label>size:40</label>
+                        <label>size: 40</label>
                         <label>Price: 200$</label>
                     </div>
                 </div>
@@ -115,7 +119,7 @@
                     </div>
                     <div class="text">
                         <h3>Nike Air Fouce 1</h3>
-                        <label>size:40</label>
+                        <label>size: 40</label>
                         <label>Price: 200$</label>
                     </div>
                 </div>
@@ -125,7 +129,7 @@
                     </div>
                     <div class="text">
                         <h3>Nike Air Fouce 1</h3>
-                        <label>size:40</label>
+                        <label>size: 40</label>
                         <label>Price: 200$</label>
                     </div>
                 </div>
@@ -135,7 +139,7 @@
                     </div>
                     <div class="text">
                         <h3>Nike Air Fouce 1</h3>
-                        <label>size:40</label>
+                        <label>size: 40</label>
                         <label>Price: 200$</label>
                     </div>
                 </div>

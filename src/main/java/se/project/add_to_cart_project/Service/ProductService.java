@@ -13,21 +13,21 @@ import se.project.add_to_cart_project.Repository.ProductRepository;
 public class ProductService {
     
     @Autowired
-    private ProductRepository proRepo;
+    private ProductRepository productRepo;
 
     public List<Product> getAllProducts(){
-        return proRepo.findAll();
+        return productRepo.findAll();
     }
 
     public void save(Product product){
-        proRepo.save(product);
+        productRepo.save(product);
     }
 
     public Optional<Product> getProductById(Long id){
-        return proRepo.findById(id);
+        return productRepo.findById(id);
     }
 
     public void deleteProductById(Long id){
-        proRepo.deleteById(id);
+        productRepo.deleteById(id);
     }
 }

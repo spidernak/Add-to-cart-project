@@ -17,6 +17,10 @@ nav label{
   display: flex;
   float: left;
 }
+.cart{
+   cursor: pointer;
+   width: 20px;
+}
 
 ul {
   width: 90%;
