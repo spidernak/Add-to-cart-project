@@ -15,7 +15,6 @@ import jakarta.servlet.http.HttpSession;
 import se.project.add_to_cart_project.Entity.Product;
 import se.project.add_to_cart_project.Entity.User;
 import se.project.add_to_cart_project.Repository.ProductRepository;
-import se.project.add_to_cart_project.Repository.UserRepository;
 import se.project.add_to_cart_project.Service.UserService;
 
 
@@ -30,9 +29,6 @@ public class UserController {
 
     @Autowired
     private ProductRepository pr;
-
-    @Autowired
-    private UserRepository ur;
 
     @GetMapping("/Log_In")
     public String Log_In() {
@@ -61,10 +57,7 @@ public class UserController {
         if (authenticatedUser != null) {
             // Store the authenticated user in the session
             session.setAttribute("authenticatedUser", authenticatedUser);
-            User u = ur.findByUserName(userName);
-            if(u!=null){
-                session.setAttribute("id", u.getId());
-            }
+
             if ("admin".equals(authenticatedUser.getRole())) {
                 return "redirect:/Admin";
             } else if ("user".equals(authenticatedUser.getRole())) {

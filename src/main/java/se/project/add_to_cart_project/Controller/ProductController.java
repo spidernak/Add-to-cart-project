@@ -17,12 +17,11 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import ch.qos.logback.core.model.Model;
 import se.project.add_to_cart_project.Service.ProductService;
-import se.project.add_to_cart_project.Entity.CartitemFind;
 import se.project.add_to_cart_project.Entity.Product;
-import se.project.add_to_cart_project.Repository.CartItemFindRepo;
 import se.project.add_to_cart_project.Repository.CartItemRepository;
 import se.project.add_to_cart_project.Repository.CartRepository;
 import se.project.add_to_cart_project.Repository.ProductRepository;
+import se.project.add_to_cart_project.Repository.UserRepository;
 
 
 
@@ -40,6 +39,7 @@ public class ProductController {
 
     @Autowired
     private CartRepository cr;
+
 
     @GetMapping("/productdetail")
     public String detailpro(){
@@ -76,15 +76,6 @@ public class ProductController {
     }
 
 
-    
-    
-    // @GetMapping("/productdetail")
-    // public String Homepagelist(org.springframework.ui.Model m){
-
-    //     m.addAttribute("products", pr.findAll());
-    //     return "viewproduct";
-    // }
-
     @GetMapping("/carted")
         public String viewcarted(){
             return "viewcarted";
@@ -104,21 +95,7 @@ public class ProductController {
         return "viewproduct";
     }
 
-    @Autowired
-    private CartItemFindRepo cir;
+
     
-    @PostMapping("/addtocart/{id}")
-    public String addToCart(@PathVariable("id") Long id, HttpServletRequest request, HttpSession session){
-        int quantity = (int) request.getAttribute("quantity");
-        Long iditem = (Long) request.getAttribute("id");
-        int price = (int) request.getAttribute("")
-
-        CartitemFind cir = new CartitemFind();
-
-        cir.setProduct(pr.findById(iditem).orElse(null));
-        cir.setUser();
-
-        return "redirect:/Homepage";
-    }
 }  
 
