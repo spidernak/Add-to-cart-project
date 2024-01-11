@@ -100,11 +100,11 @@
             </div>
         </div>
         <div class="listproduct">
-            <a th:href="@{/productdetail}">
-                <div th:each="product : ${products}" class="product">
+            <a th:each="product : ${products}" th:href="@{${'/productdetail/' + product.id}}">
+                <div  class="product">
                     <img th:src="@{${'/Asset/'+product.image}}"  alt=""/>
                     <div class="text">
-                        <!-- <label th:text="'Product: ' + ${product.productName}"></label> -->
+                        <label th:text="'Product: ' + ${product.name}"></label>
                         <label th:text="'Price: ' + ${product.price}"></label>
                         <label th:text="'Size: ' + ${product.size}"></label>
                         <label th:text="'Color: ' + ${product.color}"></label>

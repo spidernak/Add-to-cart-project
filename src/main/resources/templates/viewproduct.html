@@ -61,18 +61,18 @@
                           </svg>
                     </div>
                 </a>
-                <!-- <div class="proimg">
-                    <img th:src="@{${'/Asset/' + product.image}}" alt=""/>
+                <div class="proimg">
+                    <img th:src="@{${'/Asset/' + items.image}}" alt=""/>
                     <div class="imagetext">
-                        <h1 th:text="${product.productName}"></h1>
-                        <label th:text="'Price: ' + ${product.price}"></label>
-                        <label th:text="'Size: ' + ${product.size}"></label>
-                        <label th:text="'Color: ' + ${product.color}"></label>
+                        <h1 th:text="${items.name}"></h1>
+                        <label th:text="'Price: ' + ${items.price}"></label>
+                        <label th:text="'Size: ' + ${items.size}"></label>
+                        <label th:text="'Color: ' + ${items.color}"></label>
                         <label>Description:</label>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                        <p th:text="${items.description}">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
                     </div>
-                </div> -->
-                <div  class="proimg">
+                </div> 
+                <!-- <div  class="proimg">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpvn9KKRQ0Fxt0pTCeXieDHFcrc6QDERpyGg&usqp=CAU" alt="">
                     <div class="imagetext">
                         <h1>Air Jordan 4 Frozen</h1>
@@ -81,8 +81,7 @@
                         <label>Descriiption:</label>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore accusantium eaque, eveniet nemo sed dolores laudantium repudiandae suscipit quo et. Repudiandae impedit incidunt odio dolore tempora voluptatem at quae sed.</p>
                     </div>
-                </div> 
-                
+                </div>  -->
                 <div class="select">
                     <label>color:</label>
                     <div class="color">
@@ -104,7 +103,10 @@
                         <!-- <label>Total:</label><br> -->
                     </div>
             
-                    <a th:href="@{/Homepage}">
+                    <form th:action="@{/addtocart}">
+                        <input type="text" name="id" th:value="${items.id}" hidden>
+                        <input type="number" name="quantity" id="number" hidden value="1">
+                        <input type="number" name="price" th:value="${items.price}" hidden>
                         <button type="submit" class="addtocart">
                             <label>Add to cart</label>
                             <div class="icon">
@@ -181,7 +183,10 @@ function decreaseQuantity() {
 
 function updateQuantityDisplay() {
     document.getElementById('quantityValue').innerText = quantity;
+    document.getElementById('number').value = quantity;
 }
+
+
 
     </script>
 </body>

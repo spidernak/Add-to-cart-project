@@ -1,16 +1,28 @@
 package se.project.add_to_cart_project.Controller;
 
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import ch.qos.logback.core.model.Model;
 import se.project.add_to_cart_project.Service.ProductService;
+import se.project.add_to_cart_project.Entity.CartitemFind;
 import se.project.add_to_cart_project.Entity.Product;
+import se.project.add_to_cart_project.Repository.CartItemFindRepo;
+import se.project.add_to_cart_project.Repository.CartItemRepository;
+import se.project.add_to_cart_project.Repository.CartRepository;
+import se.project.add_to_cart_project.Repository.ProductRepository;
 
 
 
@@ -19,6 +31,15 @@ public class ProductController {
     @Autowired
     // private AddToCartService addToCartService;
     private ProductService service;
+
+    @Autowired
+    private ProductRepository pr;
+
+    @Autowired
+    private CartItemRepository cip;
+
+    @Autowired
+    private CartRepository cr;
 
     @GetMapping("/productdetail")
     public String detailpro(){
@@ -68,6 +89,36 @@ public class ProductController {
         public String viewcarted(){
             return "viewcarted";
         }
+    // @GetMapping("/productdetail/{id}")
+    // public String productdetail(org.springframework.ui.Model m, @ModelAttribute Product pro, @PathVariable("id") Long id){
+        
+    //     m.addAttribute("product",  pr.findById(id));
+    //     return "viewproduct";
+    // }
+    @GetMapping("/productdetail/{id}")
+    public String productdetail(@PathVariable("id") Long id ,org.springframework.ui.Model m){
+        Optional<Product> products = pr.findById(id);
+        Product p = products.orElse(null);
+        m.addAttribute("items", p);
+
+        return "viewproduct";
+    }
+
+    @Autowired
+    private CartItemFindRepo cir;
     
-}
+    @PostMapping("/addtocart/{id}")
+    public String addToCart(@PathVariable("id") Long id, HttpServletRequest request, HttpSession session){
+        int quantity = (int) request.getAttribute("quantity");
+        Long iditem = (Long) request.getAttribute("id");
+        int price = (int) request.getAttribute("")
+
+        CartitemFind cir = new CartitemFind();
+
+        cir.setProduct(pr.findById(iditem).orElse(null));
+        cir.setUser();
+
+        return "redirect:/Homepage";
+    }
+}  
 
